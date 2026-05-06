@@ -1,0 +1,44 @@
+{
+  "articles": [
+    {
+      "id": "Art.5",
+      "title": "Principles relating to processing of personal data",
+      "keywords": ["purpose limitation", "data minimization", "storage limitation", "integrity", "confidentiality"]
+    },
+    {
+      "id": "Art.6",
+      "title": "Lawfulness of processing",
+      "keywords": ["lawful basis", "consent", "contract", "legitimate interest"]
+    },
+    {
+      "id": "Art.7",
+      "title": "Conditions for consent",
+      "keywords": ["consent", "withdraw consent", "opt out"]
+    },
+    {
+      "id": "Art.12-22",
+      "title": "Data subject rights",
+      "keywords": ["right to erasure", "right to access", "portability", "rectification"]
+    },
+    {
+      "id": "Art.25",
+      "title": "Data protection by design and by default",
+      "keywords": ["privacy by design", "privacy by default", "minimization"]
+    },
+    {
+      "id": "Art.30",
+      "title": "Records of processing activities",
+      "keywords": ["records of processing", "data inventory"]
+    },
+    {
+      "id": "Art.32",
+      "title": "Security of processing",
+      "keywords": ["encryption", "pseudonymization", "access control"]
+    },
+    {
+      "id": "Art.35",
+      "title": "Data protection impact assessment",
+      "keywords": ["dpia", "impact assessment", "risk assessment"]
+    }
+  ]
+}
