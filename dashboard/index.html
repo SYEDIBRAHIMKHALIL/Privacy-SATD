@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy-SATD Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="background"></div>
+    <main class="container">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Privacy as Code</p>
+          <h1>Privacy-SATD Miner</h1>
+          <p class="subtitle">
+            Early signal scan for privacy-related self-admitted technical debt across open-source repositories.
+          </p>
+        </div>
+        <div class="meta">
+          <div class="meta-item">
+            <span class="meta-label">Generated</span>
+            <span id="generatedAt" class="meta-value">-</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Total Instances</span>
+            <span id="totalInstances" class="meta-value">-</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Unique Repos</span>
+            <span id="uniqueRepos" class="meta-value">-</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Top Repositories</h2>
+          <div id="chartRepos" class="chart"></div>
+        </article>
+        <article class="card">
+          <h2>Top Keywords</h2>
+          <div id="chartKeywords" class="chart"></div>
+        </article>
+        <article class="card">
+          <h2>Source Types</h2>
+          <div id="chartSources" class="chart"></div>
+        </article>
+        <article class="card">
+          <h2>GDPR Article Mapping</h2>
+          <div id="chartGdpr" class="chart"></div>
+        </article>
+      </section>
+
+      <section class="card examples">
+        <div class="examples-header">
+          <h2>Example Instances</h2>
+          <p class="muted">Small sample from filtered results.</p>
+        </div>
+        <div id="examplesList" class="examples-list"></div>
+      </section>
+
+      <footer class="footer">
+        <span>Privacy-SATD Miner</span>
+        <span class="muted">Data is generated from public OSS artifacts.</span>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,9 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
+import csv
 import json
-
-import pandas as pd
 
 
 def export_jsonl(items: list[dict], out_path: Path) -> None:
@@ -13,8 +12,16 @@ def export_jsonl(items: list[dict], out_path: Path) -> None:
 
 
 def export_csv(items: list[dict], out_path: Path) -> None:
-    df = pd.DataFrame(items)
-    df.to_csv(out_path, index=False)
+    if not items:
+        out_path.write_text("", encoding="utf-8")
+        return
+
+    fieldnames = sorted({key for item in items for key in item.keys()})
+    with out_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer.writeheader()
+        for item in items:
+            writer.writerow(item)
 
 
 def export_summary(items: list[dict], out_path: Path) -> None:

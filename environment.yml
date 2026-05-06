@@ -1,0 +1,7 @@
+name: Privacy-SATD
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - matplotlib
+  - pip
