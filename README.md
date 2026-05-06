@@ -9,9 +9,12 @@ Python pipeline that mines GitHub repositories for self-admitted technical debt 
 
 ## Setup
 1. Create a virtual environment
-2. Install dependencies
+2. Install dependencies: python -m pip install -r requirements.txt
 3. Copy .env.example to .env and set tokens
 4. Add repos to data/seed_repos.txt
+
+## Repo discovery
+python scripts/discover_repos.py --out data/seed_repos.txt --target-count 50 --min-stars 100
 
 ## Run
 python run_pipeline.py --repos data/seed_repos.txt --out-jsonl data/results/raw.jsonl
@@ -28,6 +31,3 @@ python run_pipeline.py --repos data/seed_repos.txt --out-jsonl data/results/raw.
 - data/results/results.csv
 - data/results/summary.json
 
-## Notes
-- Keep .env out of git
-- If tokens were pasted in chat, rotate them after setup
